@@ -1,0 +1,4 @@
+*_hints.py
+*_uploaded-images.txt
+__pycache__/
+*.pyc
