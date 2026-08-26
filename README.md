@@ -6,8 +6,9 @@
 
 > **Automating contestant validation and breed identification for a citywide dog show registration system.**
 
-By processing submitted pet images, this application determines whether a pet is actually a dog and correctly classifies its breed. It benchmarks three different Convolutional Neural Network (CNN) architectures—**ResNet, AlexNet, and VGG**—to evaluate the trade-off between model classification accuracy and computational runtime.
+This is my little project during the journey of AWS nanodegree Program. 
 
+By processing submitted pet images, this application determines whether a pet is actually a dog and correctly classifies its breed. It benchmarks three different Convolutional Neural Network (CNN) architectures—**ResNet, AlexNet, and VGG**—to evaluate the trade-off between model classification accuracy and computational runtime.
 
 
 ## 🛠️ Technologies & Tools
@@ -16,9 +17,6 @@ By processing submitted pet images, this application determines whether a pet is
 * **Image Processing:** PIL (Pillow)
 * **Dataset References:** ImageNet
 * **Automation:** Bash (`.sh`) for batch execution
-
-
-
 
 ## 🚀 Features
 * **Command-Line Interface (CLI):** Flexible parameter passing via `argparse` to configure directories, model architectures, and reference files.
@@ -29,9 +27,8 @@ By processing submitted pet images, this application determines whether a pet is
 * **Batch Execution & Benchmarking:** Automated bash scripts to run, profile, and compare all models in a single command.
 
 
-
-
 ## ⚙️ Running the Project
 You can run all three models sequentially and output the results directly to the terminal or text files using the automated bash script:
 ```bash
 sh run_models_batch_uploaded.sh
+```
