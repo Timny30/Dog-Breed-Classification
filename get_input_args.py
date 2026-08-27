@@ -37,12 +37,16 @@ def get_input_args():
     # Create Parse using ArgumentParser
     parser = argparse.ArgumentParser()
 
-    # ensures only 3 valid model can be run for classification
-    parser.add_argument(
-        '--arch', type=str, default='vgg',
-        choices=['vgg', 'alexnet', 'resnet'],
-        help='CNN model architecture'
-        )
+    # Argument 1: Image Folder
+    parser.add_argument('--dir', type=str, default = 'pet_images/', help = 'path to the folder of pet images')
+
+    # Argument 2: CNN Model Architecture
+    parser.add_argument('--arch', type=str, default='vgg', choices=['vgg', 'alexnet', 'resnet'],
+                    help='CNN model architecture')
+
+
+    # Argument 3: Dog Names Text File
+    parser.add_argument('--dogfile', type = str, default = 'dognames.txt', help = 'path for accessing dog images')
 
     # Replace None with parser.parse_args() parsed argument collection that 
     # you created with this function 
