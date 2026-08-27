@@ -22,6 +22,7 @@
 ##
 # Imports classifier function for using CNN to classify images 
 from classifier import classifier 
+import os
 
 def classify_images(images_dir, results_dic, model):
     """
@@ -66,9 +67,8 @@ def classify_images(images_dir, results_dic, model):
 
     # create classifier labels with classfier function
     for pet in results_dic:
-      image_path = images_dir + pet # adding file dir and image (e.g. pet_images/pet_image.png)
 
-      classifier_labels = classifier(image_path, model) # getting classifier labels 
+      classifier_labels = classifier(os.path.join(images_dir, pet), model) # getting classifier labels via image in dir
 
       model_labels = classifier_labels.lower().strip()
 
