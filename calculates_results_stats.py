@@ -108,33 +108,29 @@ def calculates_results_stats(results_dic):
         )
 
         # Percentage: Correctly classified dog
-        if results_stats_dic["n_dogs_img"] > 0: # adding statement for preventing zero division error trigger
-                results_stats_dic["pct_correct_dogs"] = (
-                        results_stats_dic["n_correct_dogs"] / results_stats_dic["n_dogs_img"]
-                ) * 100.0
-        else:
-                results_stats_dic["pct_correct_dogs"] = 0.0
+        results_stats_dic["pct_correct_dogs"] = calc_percentage(
+                results_stats_dic["n_correct_dogs"],
+                results_stats_dic["n_dogs_img"]
+        )
 
 
         # Percentage: Correctly classified dog breed
-        if results_stats_dic["n_dogs_img"] > 0: # adding statement for preventing zero division error trigger
-                results_stats_dic["pct_correct_breed"] = (
-                        results_stats_dic["n_correct_breed"] / results_stats_dic["n_dogs_img"]
-                ) * 100.0
-        else:
-                results_stats_dic["pct_correct_breed"] = 0.0
+        results_stats_dic["pct_correct_breed"] = calc_percentage(
+                results_stats_dic["n_correct_breed"],
+                results_stats_dic["n_dogs_img"]
+        )
 
         # Percentage: Correctly classified non dog
-        if results_stats_dic["n_notdogs_img"] > 0: # adding statement for preventing zero division error trigger
-                results_stats_dic["pct_correct_notdogs"] = (
-                        results_stats_dic["n_correct_notdogs"] / results_stats_dic["n_notdogs_img"]
-                ) * 100.0
-        else:
-                results_stats_dic["pct_correct_notdogs"] = 0.0
+        results_stats_dic["pct_correct_notdogs"] = calc_percentage(
+                results_stats_dic["n_correct_notdogs"],
+                results_stats_dic["n_notdogs_img"]
+        )
 
         return results_stats_dic
 
-
-
+def calc_percentage(numerator, denominator):
+        if denominator > 0:
+                return(numerator / denominator) * 100.0
+        return 0.0
 
 
