@@ -28,6 +28,20 @@ By processing submitted pet images, this application determines whether a pet is
 
 
 ## ⚙️ Running the Project
+#### 1. Run a Single Model
+Execute the main script by passing the image directory, CNN architecture (`vgg`, `alexnet`, or `resnet`), and dogname file: 
+```bash
+1. Using VGG
+python check_images.py --dir pet_images/ --arch vgg --dogfile dognames.txt
+
+2. Using alexnet
+python check_images.py --dir pet_images/ --arch resnet --dogfile dognames.txt
+
+3. resnet
+python check_images.py --dir pet_images/ --arch alexnet --dogfile dognames.txt
+```
+
+#### 2. Run Batch Benchmarking 
 You can run all three models sequentially and output the results directly to the terminal or text files using the automated bash script:
 ```bash
 sh run_models_batch_uploaded.sh
