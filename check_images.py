@@ -42,8 +42,6 @@ def main():
     # start time for calculating initial time
     start_time = time()
 
-    sleep(2)
-    
     # This function retrieves 3 Command Line Arugments from user as input from
     # the user running the program from a terminal window. This function returns
     # the collection of these command line arguments from the function call as
